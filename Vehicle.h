@@ -1,3 +1,10 @@
+/**
+ * @file
+ *   @brief Class Vehicle. This class represents a vehicle with specific id, it handles received messages
+ *  sent from LinkManager instance, decodes and parses messages and then dispatchs parsed valid information.
+ *   @author QAH <qin.anhong@163.com>
+ *
+ */
 #ifndef VEHICLE_H
 #define VEHICLE_H
 
@@ -31,8 +38,10 @@ public:
     int id(void) { return _vehicleId;}
 
 private:
+    /// current flight mode
     QString _flightMode(uint8_t baseMode);
     void _addLink(SerialLink* link);
+    /// handle heartbeat message
     void _handleHeartbeat(mavlink_message_t& message);
 
     PX4FirmwarePlugin* _firmwarePlugin;
@@ -42,8 +51,9 @@ private:
     UAS* _uas;
     ParameterLoader* _parameterLoader;
 
+    /// id of current vehicle
     int                     _vehicleId;
-    //flight modes
+    //flight modes, 2-manual, 3- altitude, 3-position
     uint8_t             _base_mode;
     uint32_t           _armed;
     int8_t               _system_status;
@@ -51,6 +61,7 @@ private:
 signals:
     void linkDeleted(Vehicle* vehicle);
 
+    /// emit to mainWindow
     void modeChanged(QString shortModeText);
     void telemetryChanged(uint8_t rssi);
     void attitudeChanged(mavlink_attitude_t* attitude);
@@ -67,6 +78,7 @@ signals:
 
 public slots:
     void _linkDeleted(SerialLink* link);
+    // Handle messages according to different message types
     void _mavlinkMessageReceived(SerialLink*link, mavlink_message_t &message);
 };
 

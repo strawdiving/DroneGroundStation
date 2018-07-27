@@ -1,3 +1,10 @@
+
+/**
+ * @file
+ *   @brief Class VehicleManager. This class manages creation and destroy of vehicle
+ *   @author QAH <qin.anhong@163.com>
+ *
+ */
 #ifndef VEHICLEMANAGER_H
 #define VEHICLEMANAGER_H
 

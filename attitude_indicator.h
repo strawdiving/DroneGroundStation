@@ -1,4 +1,9 @@
-
+/**
+ * @file
+ *   @brief Class Attitude_indicator. This class is used to read the attitude, height and speed of UAV, and draws the widget to display them in real time.
+ *   @author QAH <qin.anhong@163.com>
+ *
+ */
 #ifndef WIDGET_H
 #define WIDGET_H
 

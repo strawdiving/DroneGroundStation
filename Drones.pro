@@ -23,9 +23,6 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = Drones
 TEMPLATE = app
 
-include(./qextserialport/src/qextserialport.pri)
-INCLUDEPATH +=./qextserialport/src/qextserialport
-
 include(./MAVLinkLib.pri)
 INCLUDEPATH +=./libs/mavlink/include/mavlink/v1.0
 

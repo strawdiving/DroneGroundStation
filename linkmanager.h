@@ -1,4 +1,10 @@
-
+/**
+ * @file
+ *   @brief Class LinkManager. This class manages serial configures and links, receive the complete mavlink packet and decode ,emit signals
+ *               to MainWindow.
+ *   @author QAH <qin.anhong@163.com>
+ *
+ */
 #ifndef LINKMANAGER_H
 #define LINKMANAGER_H
 
@@ -23,12 +29,12 @@ public:
     LinkManager(QuadApplication* app);
      ~LinkManager();
 
-    // Override from ToolBase
+    /// Override from ToolBase
     virtual void setToolbox(Toolbox* toolbox);
 
-    //update serial config list
+    ///update serial config list
     void _updateConfigurationList(void);
-    //get serial config list
+    ///get serial config list
     const QList<SerialConfiguration*> getSerialConfigurationList();
 
    /// Creates, connects a link  based on the given configuration instance
@@ -40,13 +46,17 @@ public:
 
    quint64 getHeartbeatTime() {return lastHeartbeat;}
 
-   void sendMessage(mavlink_message_t message);//get current link and call sendMessage(SerialLink* link, mavlink_message_t message)
-   void sendMessage(SerialLink* link, mavlink_message_t message);//send message via serial link
+   ///get current link and call sendMessage(SerialLink* link, mavlink_message_t message)
+   void sendMessage(mavlink_message_t message);
+   /////send message via serial link
+   void sendMessage(SerialLink* link, mavlink_message_t message);
 
 signals:
    void linkDisconnected(SerialLink* link);
 
+   /// Forward heartbeat package
    void vehicleHeartbeatInfo(SerialLink* link, int vehicleId);
+   /// Forward received message
    void messageReceived(SerialLink*link, mavlink_message_t &message);
 
 private slots:
@@ -55,17 +65,19 @@ private slots:
     void _receiveBytes(SerialLink* link, QByteArray b);
 
 private:
-    //find available serial config
+    ///find available serial config
     SerialConfiguration* _findSerialConfiguration(const QString& portName);
-    //add available serial config
+    ///add available serial config
     void _addSerialConfiguration(SerialConfiguration* config);
     void _linkStatusChanged(SerialLink* link, bool connected);
 
      SerialLink* _link;
-     QList<SerialConfiguration*> _serialConfigurations;//to store known serial configs
+     ///to store known serial configs
+     QList<SerialConfiguration*> _serialConfigurations;
 
      uint32_t  _mavlinkChannelsUsedBitMask;
-     quint64 lastHeartbeat;//time when heartbeat received
+     ///time when heartbeat received
+     quint64 lastHeartbeat;
 };
 
 #endif // LINKMANAGER_H

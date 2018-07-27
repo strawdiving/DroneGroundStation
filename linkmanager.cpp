@@ -1,10 +1,4 @@
-/**
- * @file
- *   @brief Implementation of class LinkManager. This class manages serial configures and links, receive the complete mavlink packet and decode ,emit signals
- *               to MainWindow.
- *   @author QAH <qinanhong@siasun.com>
- *
- */
+
 #include "linkmanager.h"
 #include <QSerialPort>
 #include <QSerialPortInfo>

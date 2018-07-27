@@ -1,11 +1,4 @@
-﻿/**
- * @file
- *   @brief Implementation of class Attitude_indicator. This class reads in the attitude, height and speed of UAV, and draws the widget to display them in real time.
- *   @author QAH <qinanhong@siasun.com>
- *
- */
-
-#include "attitude_indicator.h"
+﻿#include "attitude_indicator.h"
 #include <QShowEvent>
 #include <QPaintEvent>
 #include <QDebug>

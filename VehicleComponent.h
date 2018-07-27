@@ -1,3 +1,4 @@
+
 #ifndef VEHICLECOMPONENT_H
 #define VEHICLECOMPONENT_H
 
