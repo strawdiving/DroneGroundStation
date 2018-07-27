@@ -9,15 +9,15 @@ Ground Station for drones developed with Qt 5.8 on Windows 7
 
 飞前设置tab
 
-![](C:\Users\wurenji.ZKXS\Desktop\1.PNG)
+![](https://raw.githubusercontent.com/strawdiving/DroneGroundStation/master/runImages/1.PNG)
 
 飞前监控tab
 
-![](C:\Users\wurenji.ZKXS\Desktop\2.PNG)
+![](https://raw.githubusercontent.com/strawdiving/DroneGroundStation/master/runImages/2.PNG)
 
 log分析tab
 
-![](C:\Users\wurenji.ZKXS\Desktop\3.PNG)
+![](https://raw.githubusercontent.com/strawdiving/DroneGroundStation/master/runImages/3.PNG)
 
 ### 如何运行
 
