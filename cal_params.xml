@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameters>
+    <group name="Calibration Parameters">
+        <parameter default="0" name="CAL_MAG0_ID" type="INT32">
+            <short_desc>ID of Magnetometer the calibration is for</short_desc>
+        </parameter>
+        <parameter default="0" name="CAL_GYRO0_ID" type="INT32">
+            <short_desc>ID of Gyro the calibration is for</short_desc>
+        </parameter>
+        <parameter default="0" name="CAL_ACC0_ID" type="INT32">
+            <short_desc>ID of Accelerometer the calibration is for</short_desc>
+        </parameter>
+        <parameter default="0" name="COM_RC_IN_MODE" type="INT32">
+            <short_desc>RC control input mode</short_desc>
+            <min>0</min>
+            <max>2</max>
+        </parameter>
+    </group>
+    <group name="Multicopter Attitude Control">
+        <parameter default="4" name="MC_ROLL_P" type="FLOAT">
+            <short_desc>Roll P gain</short_desc>
+            <min>0</min>
+            <max>8</max>
+        </parameter>
+        <parameter default="0.15" name="MC_ROLLRATE_P" type="FLOAT">
+            <short_desc>Roll rate P gain</short_desc>
+            <min>0</min>
+            <max>0.5</max>
+        </parameter>
+        <parameter default="0" name="MC_ROLLRATE_I" type="FLOAT">
+            <short_desc>Roll rate I gain</short_desc>
+            <min>0</min>
+            <max>0.1</max>
+        </parameter>
+        <parameter default="0" name="MC_ROLLRATE_D" type="FLOAT">
+            <short_desc>Roll rate D gain</short_desc>
+            <min>0</min>
+            <max>0.01</max>
+        </parameter>
+        <parameter default="4" name="MC_PITCH_P" type="FLOAT">
+            <short_desc>Pitch P gain</short_desc>
+            <min>0</min>
+            <max>8</max>
+        </parameter>
+        <parameter default="0.15" name="MC_PITCHRATE_P" type="FLOAT">
+            <short_desc>Pitch rate P gain</short_desc>
+            <min>0</min>
+            <max>0.5</max>
+        </parameter>
+        <parameter default="0" name="MC_PITCHRATE_I" type="FLOAT">
+            <short_desc>Pitch rate I gain</short_desc>
+            <min>0</min>
+            <max>0.1</max>
+        </parameter>
+        <parameter default="0" name="MC_PITCHRATE_D" type="FLOAT">
+            <short_desc>Pitch rate D gain</short_desc>
+            <min>0</min>
+            <max>0.01</max>
+        </parameter>
+        <parameter default="3.5" name="MC_YAW_P" type="FLOAT">
+            <short_desc>Yaw P gain</short_desc>
+            <min>0</min>
+            <max>7</max>
+        </parameter>
+        <parameter default="0.08" name="MC_YAWRATE_P" type="FLOAT">
+            <short_desc>Yaw rate P gain</short_desc>
+            <min>0</min>
+            <max>1</max>
+        </parameter>
+        <parameter default="0" name="MC_YAWRATE_I" type="FLOAT">
+            <short_desc>Yaw rate I gain</short_desc>
+            <min>0</min>
+            <max>0.1</max>
+        </parameter>
+        <parameter default="0" name="MC_YAWRATE_D" type="FLOAT">
+            <short_desc>Yaw rate D gain</short_desc>
+            <min>0</min>
+            <max>0.01</max>
+        </parameter>
+    </group>
+    <group name="Multicopter Position Control">
+        <parameter default="1" name="MPC_X_P" type="FLOAT">
+            <short_desc>X P gain</short_desc>
+            <min>0</min>
+            <max>2</max>
+        </parameter>
+        <parameter default="4" name="MPC_XRATE_P" type="FLOAT">
+            <short_desc>X rate P gain</short_desc>
+            <min>0</min>
+            <max>8</max>
+        </parameter>
+        <parameter default="0" name="MPC_XRATE_I" type="FLOAT">
+            <short_desc>X rate I gain</short_desc>
+            <min>0</min>
+            <max>0.5</max>
+        </parameter>
+        <parameter default="0" name="MPC_XRATE_D" type="FLOAT">
+            <short_desc>X rate D gain</short_desc>
+            <min>0</min>
+            <max>0.2</max>
+        </parameter>
+        <parameter default="1" name="MPC_Y_P" type="FLOAT">
+            <short_desc>Y P gain</short_desc>
+            <min>0</min>
+            <max>2</max>
+        </parameter>
+        <parameter default="4" name="MPC_YRATE_P" type="FLOAT">
+            <short_desc>Y rate P gain</short_desc>
+            <min>0</min>
+            <max>8</max>
+        </parameter>
+        <parameter default="0" name="MPC_YRATE_I" type="FLOAT">
+            <short_desc>Y rate I gain</short_desc>
+            <min>0</min>
+            <max>0.5</max>
+        </parameter>
+        <parameter default="0" name="MPC_YRATE_D" type="FLOAT">
+            <short_desc>Y rate D gain</short_desc>
+            <min>0</min>
+            <max>0.2</max>
+        </parameter>
+        <parameter default="2" name="MPC_Z_P" type="FLOAT">
+            <short_desc>Z P gain</short_desc>
+            <min>0</min>
+            <max>4</max>
+        </parameter>
+        <parameter default="2.5" name="MPC_ZRATE_P" type="FLOAT">
+            <short_desc>Z rate P gain</short_desc>
+            <min>0</min>
+            <max>5</max>
+        </parameter>
+        <parameter default="0.2" name="MPC_ZRATE_I" type="FLOAT">
+            <short_desc>Z rate I gain</short_desc>
+            <min>0</min>
+            <max>1</max>
+        </parameter>
+        <parameter default="0" name="MPC_ZRATE_D" type="FLOAT">
+            <short_desc>Z rate D gain</short_desc>
+            <min>0</min>
+            <max>0.2</max>
+        </parameter>
+    </group>
+</parameters>

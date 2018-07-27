@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LogWidget</class>
+ <widget class="QWidget" name="LogWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>511</width>
+    <height>397</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2" columnstretch="2,3,10">
+   <property name="verticalSpacing">
+    <number>10</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QPushButton" name="pushButton_OpenLogFile">
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>导入Log数据</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QTreeWidget" name="treeWidget">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::MultiSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="columnCount">
+      <number>1</number>
+     </property>
+     <attribute name="headerVisible">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string notr="true">1</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+     </column>
+     <item>
+      <property name="text">
+       <string>Mode</string>
+      </property>
+      <property name="flags">
+       <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>FlightStatus</string>
+      </property>
+      <property name="flags">
+       <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Baro</string>
+      </property>
+      <property name="background">
+       <brush brushstyle="NoBrush">
+        <color alpha="255">
+         <red>85</red>
+         <green>0</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </property>
+      <property name="flags">
+       <set>ItemIsEnabled</set>
+      </property>
+      <item>
+       <property name="text">
+        <string>altitude</string>
+       </property>
+       <property name="background">
+        <brush brushstyle="NoBrush">
+         <color alpha="255">
+          <red>85</red>
+          <green>0</green>
+          <blue>255</blue>
+         </color>
+        </brush>
+       </property>
+       <property name="flags">
+        <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>temperature</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>IMU</string>
+      </property>
+      <property name="flags">
+       <set>ItemIsEnabled</set>
+      </property>
+      <item>
+       <property name="text">
+        <string>acc</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsEnabled</set>
+       </property>
+       <item>
+        <property name="text">
+         <string>x</string>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y</string>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>z</string>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>gyro</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsEnabled</set>
+       </property>
+       <item>
+        <property name="text">
+         <string>x</string>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y</string>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>z</string>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>mag</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsEnabled</set>
+       </property>
+       <item>
+        <property name="text">
+         <string>x</string>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y</string>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>z</string>
+        </property>
+        <property name="flags">
+         <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+        </property>
+       </item>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>GPS</string>
+      </property>
+      <property name="flags">
+       <set>ItemIsEnabled</set>
+      </property>
+      <item>
+       <property name="text">
+        <string>lat</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>lon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>azm</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>vel</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>alt</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>sat</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>date</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>time</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>RC</string>
+      </property>
+      <property name="flags">
+       <set>ItemIsEnabled</set>
+      </property>
+      <item>
+       <property name="text">
+        <string>ch1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch10</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch11</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch12</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch13</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch14</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch15</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ch16</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>Attitude</string>
+      </property>
+      <property name="flags">
+       <set>ItemIsEnabled</set>
+      </property>
+      <item>
+       <property name="text">
+        <string>rate</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsEnabled</set>
+       </property>
+       <item>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>z</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>euler</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsEnabled</set>
+       </property>
+       <item>
+        <property name="text">
+         <string>R</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>P</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Y</string>
+        </property>
+       </item>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>Manual_Setpoint</string>
+      </property>
+      <property name="flags">
+       <set>ItemIsEnabled</set>
+      </property>
+      <item>
+       <property name="text">
+        <string>throttle</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>euler</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsEnabled</set>
+       </property>
+       <item>
+        <property name="text">
+         <string>R</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>P</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Y</string>
+        </property>
+       </item>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>PosCtrl_Setpoint</string>
+      </property>
+      <property name="flags">
+       <set>ItemIsEnabled</set>
+      </property>
+      <item>
+       <property name="text">
+        <string>position_setpoint</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsEnabled</set>
+       </property>
+       <item>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>z</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>vel_ff</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsEnabled</set>
+       </property>
+       <item>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>z</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>acc_ff</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsEnabled</set>
+       </property>
+       <item>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>z</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>yaw_setpoint</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>AltCtrl_Setpoint</string>
+      </property>
+      <property name="flags">
+       <set>ItemIsEnabled</set>
+      </property>
+      <item>
+       <property name="text">
+        <string>pos_sp_z</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>vel_ff_z</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>euler</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsEnabled</set>
+       </property>
+       <item>
+        <property name="text">
+         <string>R</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>P</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Y</string>
+        </property>
+       </item>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>Position</string>
+      </property>
+      <property name="flags">
+       <set>ItemIsEnabled</set>
+      </property>
+      <item>
+       <property name="text">
+        <string>pos</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsEnabled</set>
+       </property>
+       <item>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>z</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>acc</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsEnabled</set>
+       </property>
+       <item>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>z</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>vel</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsEnabled</set>
+       </property>
+       <item>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>z</string>
+        </property>
+       </item>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>Battery_Info</string>
+      </property>
+      <property name="flags">
+       <set>ItemIsEnabled</set>
+      </property>
+      <item>
+       <property name="text">
+        <string>voltage</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>battery_remaining</string>
+       </property>
+       <property name="flags">
+        <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsEnabled</set>
+       </property>
+      </item>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QTableView" name="tableView">
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::AdjustToContents</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0" colspan="2">
+      <widget class="QScrollArea" name="scrollArea_LogDisplay">
+       <property name="cursor" stdset="0">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>302</width>
+          <height>338</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <widget class="QPushButton" name="pushButton_Clear">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>清除绘图</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

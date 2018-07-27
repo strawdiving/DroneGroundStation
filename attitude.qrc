@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/attitude">
+        <file>attitude/background-new.jpg</file>
+        <file>attitude/Quad.svg</file>
+        <file>attitude/wifi.png</file>
+        <file>attitude/crossHair.svg</file>
+        <file>attitude/rollDialWhite.svg</file>
+        <file>attitude/rollPointerWhite.svg</file>
+    </qresource>
+    <qresource prefix="/"/>
+</RCC>

@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/qmlImages">
+        <file>qmlImages/SensorsComponentIcon.png</file>
+        <file>qmlImages/Quad.svg</file>
+        <file>qmlImages/TelemRSSI.svg</file>
+        <file>qmlImages/4AHRS.png</file>
+        <file>qmlImages/Vehicle1Down.png</file>
+        <file>qmlImages/VehicleDownRotate.png</file>
+        <file>qmlImages/VehicleLeftRotate.png</file>
+        <file>qmlImages/VehicleNoseDownRotate.png</file>
+        <file>qmlImages/Vehicle2UpsideDown.png</file>
+        <file>qmlImages/Vehicle3Left.png</file>
+        <file>qmlImages/Vehicle4Right.png</file>
+        <file>qmlImages/Vehicle5NoseDown.png</file>
+        <file>qmlImages/Vehicle6TailDown.png</file>
+        <file>qmlImages/VehicleRightRotate.png</file>
+        <file>qmlImages/VehicleTailDownRotate.png</file>
+        <file>qmlImages/VehicleUpsideDownRotate.png</file>
+        <file>qmlImages/compass3.jpg</file>
+        <file>qmlImages/gyro.jpg</file>
+    </qresource>
+</RCC>
