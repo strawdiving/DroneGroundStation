@@ -5,7 +5,7 @@ Ground Control Station for drones developed with Qt 5.8 on Windows 7
 
 - 飞前设置——飞行前，参数加载及部件（主要是传感器）的校准，PID调参。详细的拆分解析见 [https://github.com/strawdiving/Calibration1](https://github.com/strawdiving/Calibration1)
 - 飞行监控——飞行中，对飞机状态信息和飞行信息的实时监控。详细的拆分解析见 [https://github.com/strawdiving/FlightMonitor](https://github.com/strawdiving/FlightMonitor)
-- log分析——飞行后，对log数据的回放和分析，详细的拆分解析见[https://github.com/strawdiving/LogDisplay](
+- log分析——飞行后，对log数据的回放和分析，详细的拆分解析见 [https://github.com/strawdiving/LogDisplay](https://github.com/strawdiving/LogDisplay)
 
 ### 运行效果图
 
@@ -19,7 +19,7 @@ Ground Control Station for drones developed with Qt 5.8 on Windows 7
 
 log分析tab
 
-![](https://raw.githubusercontent.com/strawdiving/DroneGroundStation/master/runImages/log.PNG)
+![](https://github.com/strawdiving/DroneGroundStation/blob/master/runImages/log.png)
 
 ### 如何运行
 
